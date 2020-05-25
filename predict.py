@@ -1,7 +1,7 @@
 from PIL import Image
 from torchvision import transforms
 import torch
-import xml
+import xml.dom.minidom
 
 
 def prediction(xmls, imgs, models):
@@ -11,6 +11,7 @@ def prediction(xmls, imgs, models):
       img = Image.open(imgs)
       net = torch.load(models)
       coordinate=[]
+      maonang_num = 0
 
       for object in objects:
             bndbox = object.getElementsByTagName('bndbox')[0]
@@ -39,8 +40,7 @@ def prediction(xmls, imgs, models):
             _, predicted = torch.max(outputs, 1)
             if predicted == 1:
                   coordinate.append((xmin, ymin, xmax, ymax))
+                  maonang_num += 1
+      print("maonang number: ", maonang_num)
       return coordinate
 
-
-coordinate = prediction("./labelPic/10.xml", "./pic/10.png", './99model.pkl')
-print(coordinate)

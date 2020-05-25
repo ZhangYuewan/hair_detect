@@ -2,6 +2,7 @@ import cv2
 import os
 from lxml import etree
 import endpoint as end
+import xml.dom.minidom
 
 
 class GEN_Annotations(object):
@@ -83,12 +84,12 @@ def gene_xml(img_path, coorList):
         else:
             xmin, ymin, xmax, ymax = left, top, right, bottom
             anno.add_pic_attr("mouse", xmin, ymin, xmax, ymax)
-    anno.savefile('corxml/' + img_name.split('.')[0] + '.xml')
+    anno.savefile('./labelPic/' + img_name.split('.')[0] + '.xml')
 
 
-if __name__ == "__main__":
-    img_path = "./pic/1.png"
-    img = cv2.imread('/Users/wangmian/Downloads/x.PNG')
-    dis = end.thinImage(img)
-    endpoint = end.endPoint(dis)
-    gene_xml(img_path, endpoint)
+# if __name__ == "__main__":
+#     img_path = "./pic/1.png"
+#     img = cv2.imread('/Users/wangmian/Downloads/x.PNG')
+#     dis = end.thinImage(img)
+#     endpoint = end.endPoint(dis)
+#     gene_xml(img_path, endpoint)

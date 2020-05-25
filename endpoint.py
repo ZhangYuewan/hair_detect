@@ -1,10 +1,9 @@
-import cv2
-import numpy as np
 
 def thinImage(img):
-    H, W, C = img.shape
-    dis = (np.array(img)/255).astype('uint8')[:,:,0:1]
-    dis = dis.squeeze()
+    H, W = img.shape
+    # dis = (np.array(img)/255).astype('uint8')[:, :, 0:1]
+    # dis = dis.squeeze()
+    dis = img
     flag = []
 
     while True:
@@ -96,6 +95,7 @@ def thinImage(img):
 def endPoint(dis):
     H, W = dis.shape
     endpoint = []
+    endpoint_num = 0
     for i in range(H):
         for j in range(W):
             p1 = dis[i, j]
@@ -111,14 +111,10 @@ def endPoint(dis):
             p9 = 0 if i == 0 or j == 0 else dis[i - 1, j - 1]
             if p2+p3+p4+p5+p6+p7+p8+p9 == 1:
                 endpoint.append((i, j))
-
+                endpoint_num += 1
+    print("endpoint number: ", endpoint_num)
     return endpoint
 
-
-img = cv2.imread('/Users/wangmian/Downloads/x.PNG')
-dis = thinImage(img)
-endpoint = endPoint(dis)
-print(endpoint)
 
 
 
