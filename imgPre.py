@@ -126,11 +126,11 @@ def img_pre(src):
     # gamma自适应增强
     img_gamma = gamma_trans(gray)
     # res = color_pro(img_gamma)
-    peppers = e.canny(img_gamma)
-    peppers = FillHole(peppers, 0)
+    # peppers = e.canny(img_gamma)
+    # peppers = FillHole(peppers, 0)
     # cv2.imshow("peppers_fill", peppers)
     # cv2.imshow("img_gamma", img_gamma)
-    ret, th1 = cv2.threshold(img_gamma, 0, 255, cv2.THRESH_OTSU)
+    # ret, th1 = cv2.threshold(img_gamma, 0, 255, cv2.THRESH_OTSU)
     # cv2.imshow("th1", th1)
 
     # 差值处理
@@ -165,3 +165,16 @@ def img_pre(src):
     dis_th1 = small_remove(dis_th1)
     cv2.imshow("dis_th1", dis_th1)
     return dis_th1
+
+
+# if __name__ == '__main__':
+#     img_path = "./pic/10.png"
+#     src = cv2.imread(img_path)
+#     # 图像尺寸大小处理
+#     src = src[5:800, 165:1625]
+#     height, width = src.shape[:2]
+#     size = (int(width * 0.5), int(height * 0.5))
+#     src = cv2.resize(src, size, interpolation=cv2.INTER_AREA)
+#     cv2.imshow("src", src)
+#     # 图片预处理，得到二值图
+#     binary = img_pre(src)

@@ -1,9 +1,9 @@
+import numpy as np
+
 
 def thinImage(img):
     H, W = img.shape
-    # dis = (np.array(img)/255).astype('uint8')[:, :, 0:1]
-    # dis = dis.squeeze()
-    dis = img
+    dis = (np.array(img)/255).astype('uint8')
     flag = []
 
     while True:

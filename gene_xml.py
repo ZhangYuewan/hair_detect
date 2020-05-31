@@ -54,10 +54,7 @@ class GEN_Annotations(object):
         ymaxn.text = str(ymax)
 
 
-def gene_xml(img_path, coorList):
-    img = cv2.imread(img_path)
-    pathlist = img_path.split("/")
-    img_name = pathlist[-1]
+def gene_xml(img, img_name, coorList):
     height, width, depth = img.shape
     filename = img_name
     # 获取图片所在的文件夹名

@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bec66a0-cb3e-4514-a605-658058dd43b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgPre.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/endpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoint.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gene_xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/gene_xml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgPre.py" beforeDir="false" afterPath="$PROJECT_DIR$/imgPre.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labelPic/10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labelPic/11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labelPic/7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labelPic/8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labelPic/9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pic/temp/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/temp/background.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +169,9 @@
       <workItem from="1590046163243" duration="63000" />
       <workItem from="1590046240602" duration="13543000" />
       <workItem from="1590194297189" duration="2940000" />
-      <workItem from="1590305375543" duration="10316000" />
+      <workItem from="1590305375543" duration="11499000" />
+      <workItem from="1590472105099" duration="4838000" />
+      <workItem from="1590936346208" duration="2493000" />
     </task>
     <servers />
   </component>
@@ -187,6 +192,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/hair_detect$main.coverage" NAME="main Coverage Results" MODIFIED="1590397794287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hair_detect$main.coverage" NAME="main Coverage Results" MODIFIED="1590938802350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
