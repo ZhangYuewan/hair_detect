@@ -2,6 +2,7 @@ from PIL import Image
 from torchvision import transforms
 import torch
 import xml.dom.minidom
+import cv2
 
 
 def prediction(xmls, imgs, models):
@@ -12,6 +13,7 @@ def prediction(xmls, imgs, models):
       net = torch.load(models)
       coordinate=[]
       maonang_num = 0
+      object_num = 0
 
       for object in objects:
             bndbox = object.getElementsByTagName('bndbox')[0]
@@ -35,6 +37,8 @@ def prediction(xmls, imgs, models):
               transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
             ])
             img_cut = crop_obj(img_cut)
+            cv2.imwrite('./pic/temp/objects/%d.jpg' % object_num, img_cut)
+            object_num += 1
             img_cut = torch.unsqueeze(img_cut, dim=0).float()
             outputs = net(img_cut)
             _, predicted = torch.max(outputs, 1)

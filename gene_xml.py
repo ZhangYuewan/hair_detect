@@ -66,17 +66,17 @@ def gene_xml(img, img_name, coorList):
     # 根据端点设置xml文件
     for coor in coorList:
         x, y = coor[1], coor[0]
-        swidth, sheight = 15, 15
+        swidth, sheight = 13, 13
         left, right = x - swidth, x + swidth
         top, bottom = y - sheight, y + sheight
 
-        if x - 10 < 0:
+        if x - swidth < 0:
             pass
-        elif x + 10 > width:
+        elif x + swidth > width:
             pass
-        elif y - 10 < 0:
+        elif y - sheight < 0:
             pass
-        elif y + 10 > height:
+        elif y + sheight > height:
             pass
         else:
             xmin, ymin, xmax, ymax = left, top, right, bottom

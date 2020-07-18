@@ -1,5 +1,5 @@
 import numpy as np
-
+import cv2
 
 def thinImage(img):
     H, W = img.shape
@@ -20,7 +20,7 @@ def thinImage(img):
                 p7 = 0 if i == H-1 or j == 0 else dis[i+1, j-1]
                 p8 = 0 if j == 0 else dis[i, j-1]
                 p9 = 0 if i == 0 or j == 0 else dis[i-1, j-1]
-                if p2+p3+p4+p5+p6+p7+p8+p9 >= 2 and p2+p3+p4+p5+p6+p7+p8+p9 <= 6:
+                if 2 <= p2+p3+p4+p5+p6+p7+p8+p9 <= 6:
                     ap = 0
                     if p2 == 0 and p3 == 1:
                         ap = ap+1
@@ -61,7 +61,7 @@ def thinImage(img):
                 p7 = 0 if i == H-1 or j == 0 else dis[i+1, j-1]
                 p8 = 0 if j == 0 else dis[i, j-1]
                 p9 = 0 if i ==0 or j == 0 else dis[i-1, j-1]
-                if p2+p3+p4+p5+p6+p7+p8+p9 >= 2 and p2+p3+p4+p5+p6+p7+p8+p9 <= 6:
+                if 2 <= p2+p3+p4+p5+p6+p7+p8+p9 <= 6:
                     ap = 0
                     if p2 == 0 and p3 == 1:
                         ap = ap+1
@@ -111,7 +111,9 @@ def endPoint(dis):
             p9 = 0 if i == 0 or j == 0 else dis[i - 1, j - 1]
             if p2+p3+p4+p5+p6+p7+p8+p9 == 1:
                 endpoint.append((i, j))
+                # cv2.circle(dis, (j, i), 5, 1, -1)
                 endpoint_num += 1
+    cv2.imshow("endpoints", dis * 255)
     print("endpoint number: ", endpoint_num)
     return endpoint
 

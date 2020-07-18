@@ -5,14 +5,22 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/endpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoint.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gene_xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/gene_xml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/haircut.py" beforeDir="false" afterPath="$PROJECT_DIR$/haircut.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgPre.py" beforeDir="false" afterPath="$PROJECT_DIR$/imgPre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labelPic/1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labelPic/10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/10.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labelPic/11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labelPic/13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labelPic/2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labelPic/3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labelPic/6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labelPic/7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labelPic/8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labelPic/9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labelPic/9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pic/temp/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pic/temp/background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction_2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +43,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../denoising" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -171,7 +179,12 @@
       <workItem from="1590194297189" duration="2940000" />
       <workItem from="1590305375543" duration="11499000" />
       <workItem from="1590472105099" duration="4838000" />
-      <workItem from="1590936346208" duration="2493000" />
+      <workItem from="1590936346208" duration="9740000" />
+      <workItem from="1591107094481" duration="3724000" />
+      <workItem from="1591145279758" duration="14343000" />
+      <workItem from="1592100530543" duration="4378000" />
+      <workItem from="1592272462317" duration="14470000" />
+      <workItem from="1594812296558" duration="4450000" />
     </task>
     <servers />
   </component>
@@ -192,6 +205,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/hair_detect$main.coverage" NAME="main Coverage Results" MODIFIED="1590938802350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hair_detect$main.coverage" NAME="main Coverage Results" MODIFIED="1594817896437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

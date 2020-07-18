@@ -11,6 +11,7 @@ def prediction(xmls, imgs, models):
       net = torch.load(models)
       coordinate=[]
       maonang_num = 0
+      object_num = 0
 
       for object in objects:
             bndbox = object.getElementsByTagName('bndbox')[0]
@@ -27,6 +28,8 @@ def prediction(xmls, imgs, models):
             ymin = int(ymin_data)
             ymax = int(ymax_data)
             img_cut = imgs[ymin:ymax, xmin:xmax, :]
+            # cv2.imwrite('./pic/temp/objects/%d.jpg' % object_num, img_cut)
+            # object_num += 1
 
             crop_obj=transforms.Compose([
               transforms.ToPILImage(),

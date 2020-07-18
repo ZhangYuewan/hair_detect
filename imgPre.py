@@ -96,12 +96,14 @@ def FillHole(im_in, type):
     return im_out
 
 
-def color_pro(gray_img):
+def color_pro(src, gray_img):
     h, w = gray_img.shape
     res = np.zeros((h, w), np.uint8)
     for i in range(h):
         for j in range(w):
-            if gray_img[i, j] > 156:
+            r, g, b = src[i, j]
+            # YUV空间里的Y值，大于192判断为浅色
+            if r * 0.299 + g * 0.578 + b * 0.114 >= 192:
                 res[i, j] = 255
     cv2.imshow("color_res", res)
     return res

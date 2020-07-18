@@ -9,10 +9,10 @@ def haircut(img_thresh, img, coordidate, sideLength):
         coordidate_tuple = coordidate[i]
         x_mid = int(coordidate_tuple[0]+coordidate_tuple[2])//2
         y_mid = int(coordidate_tuple[1]+coordidate_tuple[3])//2
-        x.append(x_mid)
-        y.append(y_mid)
+        x.append(y_mid)
+        y.append(x_mid)
 
-    cv2.imshow('src',img)
+    cv2.imshow('src', img)
     cv2.waitKey(0)
     rows = img_thresh.shape[0]
     cols = img_thresh.shape[1]
@@ -20,23 +20,23 @@ def haircut(img_thresh, img, coordidate, sideLength):
     # print(cols)
     for i in range(rows):
         for j in range(cols):
-            if (img_thresh[i][j] < 180):
+            if img_thresh[i][j] < 180:
                 img_thresh[i][j] = 0
             else:
                 img_thresh[i][j] = 255
     length = len(x)
     # 对边界的点进行移动
     for i in range(length):
-        if (x[i] - sideLength//2 < 0):
+        if x[i] - sideLength//2 < 0:
             abs = sideLength//2 - x[i]
             x[i] = x[i] + abs
-        if (x[i] + sideLength//2 > rows):
+        if x[i] + sideLength//2 > rows:
             abs = x[i] + sideLength/2 - rows
             x[i] = x[i] - abs
-        if (y[i] - sideLength//2 < 0):
+        if y[i] - sideLength//2 < 0:
             abs = sideLength//2 - y[i]
             y[i] = y[i] + abs
-        if (y[i] + sideLength//2 > cols):
+        if y[i] + sideLength//2 > cols:
             abs = y[i] + sideLength//2 - cols
             y[i] = y[i] - abs
 
@@ -93,7 +93,7 @@ def haircut(img_thresh, img, coordidate, sideLength):
 
     for i in range(rows):
         for j in range(cols):
-            if (all(result[i][j] != [6, 6, 6])):
+            if all(result[i][j] != [6, 6, 6]):
                 result[i][j] = background[i][j]
 
     for i in range(length):
